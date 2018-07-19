@@ -24,6 +24,7 @@ import (
 	"math"
 	"testing"
 
+	"github.com/m3db/m3db/src/coordinator/executor/transform"
 	"github.com/m3db/m3db/src/coordinator/parser"
 	"github.com/m3db/m3db/src/coordinator/test"
 	"github.com/m3db/m3db/src/coordinator/test/executor"
@@ -52,7 +53,7 @@ func TestClampMin(t *testing.T) {
 	c, sink := executor.NewControllerWithSink(parser.NodeID(1))
 	op, err := NewClampOp([]interface{}{3.0}, ClampMinType)
 	require.NoError(t, err)
-	node := op.Node(c)
+	node := op.Node(c, transform.Options{})
 	err = node.Process(parser.NodeID(0), block)
 	require.NoError(t, err)
 	expected := expectedClampVals(values, 3.0, math.Max)
@@ -68,7 +69,7 @@ func TestClampMax(t *testing.T) {
 	c, sink := executor.NewControllerWithSink(parser.NodeID(1))
 	op, err := NewClampOp([]interface{}{3.0}, ClampMaxType)
 	require.NoError(t, err)
-	node := op.Node(c)
+	node := op.Node(c, transform.Options{})
 	err = node.Process(parser.NodeID(0), block)
 	require.NoError(t, err)
 	expected := expectedClampVals(values, 3.0, math.Min)

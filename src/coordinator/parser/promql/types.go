@@ -26,6 +26,7 @@ import (
 	"github.com/m3db/m3db/src/coordinator/functions"
 	"github.com/m3db/m3db/src/coordinator/functions/linear"
 	"github.com/m3db/m3db/src/coordinator/functions/logical"
+	"github.com/m3db/m3db/src/coordinator/functions/temporal"
 	"github.com/m3db/m3db/src/coordinator/models"
 	"github.com/m3db/m3db/src/coordinator/parser"
 	"github.com/m3db/m3db/src/coordinator/parser/common"
@@ -105,6 +106,8 @@ func NewFunctionExpr(name string, argValues []interface{}) (parser.Params, error
 		return linear.NewMathOp(linear.Log2Type)
 	case linear.SqrtType:
 		return linear.NewMathOp(linear.SqrtType)
+	case temporal.CountTemporalType:
+		return temporal.NewCountOp(argValues)
 
 	default:
 		// TODO: handle other types

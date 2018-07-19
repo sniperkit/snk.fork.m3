@@ -24,6 +24,7 @@ import (
 	"math"
 	"testing"
 
+	"github.com/m3db/m3db/src/coordinator/executor/transform"
 	"github.com/m3db/m3db/src/coordinator/parser"
 	"github.com/m3db/m3db/src/coordinator/test"
 	"github.com/m3db/m3db/src/coordinator/test/executor"
@@ -39,7 +40,7 @@ func TestAndWithExactValues(t *testing.T) {
 
 	op := NewAndOp(parser.NodeID(0), parser.NodeID(1), &VectorMatching{})
 	c, sink := executor.NewControllerWithSink(parser.NodeID(2))
-	node := op.Node(c)
+	node := op.Node(c, transform.Options{})
 
 	err := node.Process(parser.NodeID(1), block2)
 	require.NoError(t, err)
@@ -62,7 +63,7 @@ func TestAndWithSomeValues(t *testing.T) {
 
 	op := NewAndOp(parser.NodeID(0), parser.NodeID(1), &VectorMatching{})
 	c, sink := executor.NewControllerWithSink(parser.NodeID(2))
-	node := op.Node(c)
+	node := op.Node(c, transform.Options{})
 
 	err := node.Process(parser.NodeID(1), block2)
 	require.NoError(t, err)

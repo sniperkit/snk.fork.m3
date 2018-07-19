@@ -69,7 +69,7 @@ func alignValues(values Values, start, end time.Time, interval time.Duration) (F
 	case Datapoints:
 		return RawPointsToFixedStep(vals, start, end, interval)
 	case FixedResolutionMutableValues:
-		// TODO: Align fixed resolution as well once storages can return those directly
+		// TODO: NearestStart fixed resolution as well once storages can return those directly
 		return vals, nil
 	default:
 		return nil, fmt.Errorf("unknown type: %v", vals)

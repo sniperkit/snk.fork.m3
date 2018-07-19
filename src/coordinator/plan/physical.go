@@ -22,6 +22,7 @@ package plan
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/m3db/m3db/src/coordinator/executor/transform"
 	"github.com/m3db/m3db/src/coordinator/models"
@@ -66,7 +67,34 @@ func NewPhysicalPlan(lp LogicalPlan, storage storage.Storage, params models.Requ
 		return PhysicalPlan{}, err
 	}
 
+	// Update times
+	pl = pl.shiftTime()
 	return pl, nil
+}
+
+func (p PhysicalPlan) shiftTime() PhysicalPlan {
+	var maxOffset, maxRange time.Duration
+	for _, transformID := range p.pipeline {
+		node := p.steps[transformID]
+		boundOp, ok := node.Transform.Op.(transform.BoundOp)
+		if !ok {
+			continue
+		}
+
+		spec := boundOp.Bounds()
+		if spec.Offset > maxOffset {
+			maxOffset = spec.Offset
+		}
+
+		if spec.Range > maxRange {
+			maxRange = spec.Range
+		}
+	}
+
+	startShift := maxOffset + maxRange
+	// keeping end the same for now, might optimize later
+	p.TimeSpec.Start = p.TimeSpec.Start.Add(-1 * startShift)
+	return p
 }
 
 func (p PhysicalPlan) createResultNode() (PhysicalPlan, error) {
