@@ -55,7 +55,7 @@ func NewPhysicalPlan(lp LogicalPlan, storage storage.Storage, params models.Requ
 		pipeline: cloned.Pipeline,
 		TimeSpec: transform.TimeSpec{
 			Start: params.Start,
-			End:   params.End,
+			End:   params.ExclusiveEnd(),
 			Now:   params.Now,
 			Step:  params.Step,
 		},

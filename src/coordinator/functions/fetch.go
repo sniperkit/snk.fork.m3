@@ -91,6 +91,14 @@ func (n *FetchNode) Execute(ctx context.Context) error {
 	}
 
 	for _, block := range blockResult.Blocks {
+		if n.debug {
+			// Ignore any errors
+			iter, _ := block.StepIter()
+			if iter != nil {
+				fmt.Printf("[fetch node]: meta for the block: %v\n", iter.Meta())
+			}
+		}
+
 		if err := n.controller.Process(block); err != nil {
 			block.Close()
 			// Fail on first error

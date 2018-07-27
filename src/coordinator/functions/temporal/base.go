@@ -214,7 +214,15 @@ func (c *baseNode) processSingleRequest(request processRequest) error {
 	steps := int((aggDuration + bounds.Duration) / bounds.StepSize)
 	values := make([]float64, 0, steps)
 
-	builder, err := c.controller.BlockBuilder(seriesIter.Meta(), seriesIter.SeriesMeta())
+	seriesMeta := seriesIter.SeriesMeta()
+	resultSeriesMeta := make([]block.SeriesMeta, len(seriesMeta))
+	for i, m := range seriesMeta {
+		tags := m.Tags.WithoutName()
+		resultSeriesMeta[i].Tags = tags
+		resultSeriesMeta[i].Name =  tags.ID()
+	}
+
+	builder, err := c.controller.BlockBuilder(seriesIter.Meta(), resultSeriesMeta)
 	if err != nil {
 		return err
 	}
