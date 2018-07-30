@@ -162,7 +162,8 @@ func renderResultsJSON(w io.Writer, series []*ts.Series, params models.RequestPa
 		vals := s.Values()
 		for i := 0; i < s.Len(); i++ {
 			dp := vals.DatapointAt(i)
-			// Skip points before the query boundary
+			// Skip points before the query boundary. Ideal place to adjust these would be at the result node but that would make it inefficient
+			// since we would need to create another block just for the sake of restricting the bounds
 			if dp.Timestamp.Before(params.Start) {
 				continue
 			}

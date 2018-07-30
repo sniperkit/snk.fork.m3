@@ -135,7 +135,6 @@ func (c *TimeCache) MultiGet(keys []time.Time) []block.Block {
 		if ok {
 			blks[i] = b
 		}
-
 	}
 
 	return blks

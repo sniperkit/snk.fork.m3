@@ -103,8 +103,10 @@ func (c *baseNode) Process(ID parser.NodeID, b block.Block) error {
 	meta := iter.Meta()
 	bounds := meta.Bounds
 	blockDuration := bounds.Duration
+	// Figure out the maximum blocks needed for the temporal function
 	maxBlocks := int(math.Ceil(float64(c.op.duration) / float64(blockDuration)))
 
+	// Figure out the leftmost block and rightmost blocks
 	leftRangeStart := bounds.Previous(maxBlocks).Start
 	queryStartBounds := bounds.Nearest(c.transformOpts.TimeSpec.Start)
 
@@ -119,15 +121,18 @@ func (c *baseNode) Process(ID parser.NodeID, b block.Block) error {
 		rightRangeStart = queryEndBounds.Start
 	}
 
+	// Process left side of the range
 	leftBlks, emptyLeftBlocks := c.processLeft(b, bounds, maxBlocks, leftRangeStart)
 
 	processRequests := make([]processRequest, 0, len(leftBlks))
+	// If we have all blocks for the left range in the cache, then process the current block
 	if !emptyLeftBlocks {
 		processRequests = append(processRequests, processRequest{blk: b, deps: leftBlks, bounds: bounds})
 	}
 
 	leftBlks = append(leftBlks, b)
 
+	// Process right side of the range
 	rightBlks, emptyRightBlocks := c.processRight(b, bounds, maxBlocks, rightRangeStart)
 
 	for i := 0; i < len(rightBlks); i++ {
@@ -142,6 +147,7 @@ func (c *baseNode) Process(ID parser.NodeID, b block.Block) error {
 
 	}
 
+	// If either the left range or right range wasn't fully processed then cache the current block
 	if emptyLeftBlocks || emptyRightBlocks {
 		if err := c.cache.Add(bounds.Start, b); err != nil {
 			return err
@@ -151,6 +157,7 @@ func (c *baseNode) Process(ID parser.NodeID, b block.Block) error {
 	return c.processCompletedBlocks(processRequests, queryStartBounds, queryEndBounds, maxBlocks)
 }
 
+// processLeft processes the current block. For the current block, figure out whether we have enough previous blocks which can help process it
 func (c *baseNode) processLeft(b block.Block, bounds block.Bounds, maxBlocks int, leftRangeStart time.Time) ([]block.Block, bool) {
 	leftRangeTimes := make([]time.Time, 0, maxBlocks)
 	for t := leftRangeStart; t.Before(bounds.Start); t = t.Add(bounds.Duration) {
@@ -166,6 +173,7 @@ func (c *baseNode) processLeft(b block.Block, bounds block.Bounds, maxBlocks int
 	return leftBlks, false
 }
 
+// processRight processes blocks after current block. This is done by fetching all contiguous right blocks until the right range
 func (c *baseNode) processRight(b block.Block, bounds block.Bounds, maxBlocks int, rightRangeStart time.Time) ([]block.Block, bool) {
 	rightRangeTimes := make([]time.Time, 0, maxBlocks)
 	for t := bounds.End(); !t.After(rightRangeStart); t = t.Add(bounds.Duration) {
@@ -177,6 +185,7 @@ func (c *baseNode) processRight(b block.Block, bounds block.Bounds, maxBlocks in
 	return rightBlks[:firstNil], firstNil != len(rightBlks)
 }
 
+// processCompletedBlocks processes all blocks for which are dependant blocks are present
 func (c *baseNode) processCompletedBlocks(processRequests []processRequest, queryStartBounds, queryEndBounds block.Bounds, maxBlocks int) error {
 	processedKeys := make([]time.Time, len(processRequests))
 	for i, req := range processRequests {

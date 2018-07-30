@@ -36,7 +36,7 @@ func TestBounds(t *testing.T) {
 	}
 	assert.Equal(t, bounds.Steps(), 0)
 	_, err := bounds.TimeForIndex(0)
-	assert.Error(t, err, "No valid index in this block")
+	assert.Error(t, err, "no valid index in this block")
 
 	bounds = Bounds{
 		Start:    now,
@@ -45,7 +45,7 @@ func TestBounds(t *testing.T) {
 	}
 	assert.Equal(t, bounds.Steps(), 0)
 	_, err = bounds.TimeForIndex(0)
-	assert.Error(t, err, "No valid index in this block")
+	assert.Error(t, err, "no valid index in this block")
 
 	bounds = Bounds{
 		Start:    now,
@@ -59,6 +59,10 @@ func TestBounds(t *testing.T) {
 	_, err = bounds.TimeForIndex(1)
 	assert.Error(t, err)
 
+	b := bounds.Next(1)
+	assert.Equal(t, b.Start, bounds.End())
+	assert.Equal(t, b.StepSize, bounds.StepSize)
+
 	bounds = Bounds{
 		Start:    now,
 		Duration: 10 * time.Minute,
@@ -68,4 +72,10 @@ func TestBounds(t *testing.T) {
 	it, err = bounds.TimeForIndex(9)
 	assert.NoError(t, err)
 	assert.Equal(t, it, now.Add(9*bounds.StepSize))
+	b = bounds.Next(9)
+	assert.Equal(t, b.Start, now.Add(9*bounds.Duration))
+	assert.Equal(t, b.StepSize, bounds.StepSize)
+	b = b.Previous(9)
+	assert.Equal(t, b.Start, bounds.Start)
+	assert.Equal(t, b.Duration, bounds.Duration)
 }

@@ -29,6 +29,9 @@ import (
 	"github.com/m3db/m3db/src/coordinator/models"
 	"github.com/m3db/m3db/src/coordinator/parser"
 	"github.com/m3db/m3db/src/coordinator/storage"
+	"github.com/m3db/m3db/src/coordinator/util/logging"
+
+	"go.uber.org/zap"
 )
 
 // FetchType gets the series from storage
@@ -95,7 +98,7 @@ func (n *FetchNode) Execute(ctx context.Context) error {
 			// Ignore any errors
 			iter, _ := block.StepIter()
 			if iter != nil {
-				fmt.Printf("[fetch node]: meta for the block: %v\n", iter.Meta())
+				logging.WithContext(ctx).Info("fetch node", zap.Any("meta", iter.Meta()))
 			}
 		}
 
