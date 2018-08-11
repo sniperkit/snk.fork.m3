@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 /**
  * what-input - A global utility for tracking the current input method (mouse, keyboard or touch).
  * @version v4.2.0

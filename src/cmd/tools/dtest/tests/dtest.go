@@ -1,13 +1,19 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 package dtests
 
 import (
 	"fmt"
 	"os"
 
-	"github.com/m3db/m3/src/cmd/tools/dtest/config"
-	xlog "github.com/m3db/m3x/log"
-
 	"github.com/spf13/cobra"
+
+	"github.com/sniperkit/snk.fork.m3/src/cmd/tools/dtest/config"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 var (

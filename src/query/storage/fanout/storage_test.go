@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,19 +32,19 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/encoding"
-	"github.com/m3db/m3/src/query/errors"
-	"github.com/m3db/m3/src/query/policy/filter"
-	"github.com/m3db/m3/src/query/storage"
-	"github.com/m3db/m3/src/query/test/local"
-	"github.com/m3db/m3/src/query/test/seriesiter"
-	"github.com/m3db/m3/src/query/ts"
-	"github.com/m3db/m3/src/query/util/logging"
-	"github.com/m3db/m3x/ident"
-
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding"
+	"github.com/sniperkit/snk.fork.m3/src/query/errors"
+	"github.com/sniperkit/snk.fork.m3/src/query/policy/filter"
+	"github.com/sniperkit/snk.fork.m3/src/query/storage"
+	"github.com/sniperkit/snk.fork.m3/src/query/test/local"
+	"github.com/sniperkit/snk.fork.m3/src/query/test/seriesiter"
+	"github.com/sniperkit/snk.fork.m3/src/query/ts"
+	"github.com/sniperkit/snk.fork.m3/src/query/util/logging"
+	"github.com/sniperkit/snk.fork.m3x/ident"
 )
 
 func filterFunc(output bool) filter.Storage {

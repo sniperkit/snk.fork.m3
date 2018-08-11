@@ -1,11 +1,17 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 package dtests
 
 import (
-	"github.com/m3db/m3/src/cmd/tools/dtest/harness"
-	"github.com/m3db/m3cluster/shard"
-	xclock "github.com/m3db/m3x/clock"
-
 	"github.com/spf13/cobra"
+
+	"github.com/sniperkit/snk.fork.m3/src/cmd/tools/dtest/harness"
+	"github.com/sniperkit/snk.fork.m3cluster/shard"
+	xclock "github.com/sniperkit/snk.fork.m3x/clock"
 )
 
 var (

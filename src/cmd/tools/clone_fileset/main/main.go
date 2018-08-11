@@ -1,12 +1,18 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 package main
 
 import (
 	"flag"
 	"os"
 
-	"github.com/m3db/m3/src/dbnode/persist/fs/clone"
-	xlog "github.com/m3db/m3x/log"
-	xtime "github.com/m3db/m3x/time"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/persist/fs/clone"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 var (

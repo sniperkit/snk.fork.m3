@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,8 +27,8 @@
 package serialize
 
 import (
-	"github.com/m3db/m3/src/dbnode/x/xpool"
-	"github.com/m3db/m3x/pool"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/x/xpool"
+	"github.com/sniperkit/snk.fork.m3x/pool"
 )
 
 const (

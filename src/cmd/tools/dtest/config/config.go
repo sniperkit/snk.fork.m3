@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 package config
 
 import (
@@ -5,18 +11,18 @@ import (
 	"io/ioutil"
 	"time"
 
-	m3emnode "github.com/m3db/m3/src/dbnode/x/m3em/node"
-	etcdclient "github.com/m3db/m3cluster/client/etcd"
-	"github.com/m3db/m3cluster/placement"
-	"github.com/m3db/m3em/cluster"
-	"github.com/m3db/m3em/generated/proto/m3em"
-	"github.com/m3db/m3em/node"
-	"github.com/m3db/m3em/x/grpc"
-	xconfig "github.com/m3db/m3x/config"
-	xlog "github.com/m3db/m3x/log"
-
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
+
+	m3emnode "github.com/sniperkit/snk.fork.m3/src/dbnode/x/m3em/node"
+	etcdclient "github.com/sniperkit/snk.fork.m3cluster/client/etcd"
+	"github.com/sniperkit/snk.fork.m3cluster/placement"
+	"github.com/sniperkit/snk.fork.m3em/cluster"
+	"github.com/sniperkit/snk.fork.m3em/generated/proto/m3em"
+	"github.com/sniperkit/snk.fork.m3em/node"
+	"github.com/sniperkit/snk.fork.m3em/x/grpc"
+	xconfig "github.com/sniperkit/snk.fork.m3x/config"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 // Configuration is a collection of knobs to control test behavior

@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,26 +30,26 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/serialize"
-	"github.com/m3db/m3/src/query/storage"
-	"github.com/m3db/m3/src/query/storage/mock"
-	"github.com/m3db/m3cluster/kv/mem"
-	"github.com/m3db/m3ctl/service/r2/store"
-	r2kv "github.com/m3db/m3ctl/service/r2/store/kv"
-	"github.com/m3db/m3metrics/aggregation"
-	"github.com/m3db/m3metrics/generated/proto/rulepb"
-	"github.com/m3db/m3metrics/matcher"
-	"github.com/m3db/m3metrics/metric/id"
-	"github.com/m3db/m3metrics/policy"
-	ruleskv "github.com/m3db/m3metrics/rules/store/kv"
-	"github.com/m3db/m3metrics/rules/view"
-	"github.com/m3db/m3x/clock"
-	"github.com/m3db/m3x/instrument"
-	xlog "github.com/m3db/m3x/log"
-	"github.com/m3db/m3x/pool"
-
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/serialize"
+	"github.com/sniperkit/snk.fork.m3/src/query/storage"
+	"github.com/sniperkit/snk.fork.m3/src/query/storage/mock"
+	"github.com/sniperkit/snk.fork.m3cluster/kv/mem"
+	"github.com/sniperkit/snk.fork.m3ctl/service/r2/store"
+	r2kv "github.com/sniperkit/snk.fork.m3ctl/service/r2/store/kv"
+	"github.com/sniperkit/snk.fork.m3metrics/aggregation"
+	"github.com/sniperkit/snk.fork.m3metrics/generated/proto/rulepb"
+	"github.com/sniperkit/snk.fork.m3metrics/matcher"
+	"github.com/sniperkit/snk.fork.m3metrics/metric/id"
+	"github.com/sniperkit/snk.fork.m3metrics/policy"
+	ruleskv "github.com/sniperkit/snk.fork.m3metrics/rules/store/kv"
+	"github.com/sniperkit/snk.fork.m3metrics/rules/view"
+	"github.com/sniperkit/snk.fork.m3x/clock"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
+	"github.com/sniperkit/snk.fork.m3x/pool"
 )
 
 func TestDownsamplerAggregation(t *testing.T) {

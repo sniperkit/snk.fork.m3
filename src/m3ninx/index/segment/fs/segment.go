@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,19 +34,19 @@ import (
 	"sync"
 	"unicode/utf8"
 
-	"github.com/m3db/m3/src/m3ninx/doc"
-	"github.com/m3db/m3/src/m3ninx/generated/proto/fswriter"
-	"github.com/m3db/m3/src/m3ninx/index"
-	"github.com/m3db/m3/src/m3ninx/index/segment/fs/encoding"
-	"github.com/m3db/m3/src/m3ninx/index/segment/fs/encoding/docs"
-	"github.com/m3db/m3/src/m3ninx/postings"
-	"github.com/m3db/m3/src/m3ninx/postings/pilosa"
-	"github.com/m3db/m3/src/m3ninx/postings/roaring"
-	"github.com/m3db/m3/src/m3ninx/x"
-	xerrors "github.com/m3db/m3x/errors"
-
 	"github.com/couchbase/vellum"
 	vregex "github.com/couchbase/vellum/regexp"
+
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/doc"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/generated/proto/fswriter"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/index"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/index/segment/fs/encoding"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/index/segment/fs/encoding/docs"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/postings"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/postings/pilosa"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/postings/roaring"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/x"
+	xerrors "github.com/sniperkit/snk.fork.m3x/errors"
 )
 
 var (
@@ -230,7 +236,7 @@ func (r *fsSegment) Close() error {
 // FOLLOWUP(prateek): really need to change the types returned in Fields() and Terms()
 // to be iterators to allow us to pool the bytes being returned to the user. Otherwise
 // we're forced to copy these massive slices every time. Tracking this under
-// https://github.com/m3db/m3ninx/issues/66
+// https://github.com/sniperkit/snk.fork.m3ninx/issues/66
 func (r *fsSegment) Fields() ([][]byte, error) {
 	r.RLock()
 	defer r.RUnlock()

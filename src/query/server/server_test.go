@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // +build big
 //
 // Copyright (c) 2018 Uber Technologies, Inc.
@@ -30,19 +36,18 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3x/ident"
-
-	"github.com/m3db/m3/src/cmd/services/m3query/config"
-	"github.com/m3db/m3/src/dbnode/client"
-	"github.com/m3db/m3/src/query/api/v1/handler/prometheus/remote"
-	remotetest "github.com/m3db/m3/src/query/api/v1/handler/prometheus/remote/test/remote"
-	"github.com/m3db/m3/src/query/storage/local"
-	xconfig "github.com/m3db/m3x/config"
-	xtest "github.com/m3db/m3x/test"
-
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+
+	"github.com/sniperkit/snk.fork.m3/src/cmd/services/m3query/config"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/client"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler/prometheus/remote"
+	remotetest "github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler/prometheus/remote/test/remote"
+	"github.com/sniperkit/snk.fork.m3/src/query/storage/local"
+	xconfig "github.com/sniperkit/snk.fork.m3x/config"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	xtest "github.com/sniperkit/snk.fork.m3x/test"
 )
 
 var configYAML = `

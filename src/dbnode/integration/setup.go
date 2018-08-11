@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,31 +38,31 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/client"
-	"github.com/m3db/m3/src/dbnode/clock"
-	"github.com/m3db/m3/src/dbnode/generated/thrift/rpc"
-	"github.com/m3db/m3/src/dbnode/integration/fake"
-	"github.com/m3db/m3/src/dbnode/integration/generate"
-	"github.com/m3db/m3/src/dbnode/persist/fs"
-	"github.com/m3db/m3/src/dbnode/retention"
-	"github.com/m3db/m3/src/dbnode/sharding"
-	"github.com/m3db/m3/src/dbnode/storage"
-	"github.com/m3db/m3/src/dbnode/storage/block"
-	"github.com/m3db/m3/src/dbnode/storage/cluster"
-	"github.com/m3db/m3/src/dbnode/storage/index"
-	"github.com/m3db/m3/src/dbnode/storage/namespace"
-	"github.com/m3db/m3/src/dbnode/storage/series"
-	"github.com/m3db/m3/src/dbnode/topology"
-	"github.com/m3db/m3/src/dbnode/ts"
-	"github.com/m3db/m3cluster/services"
-	"github.com/m3db/m3cluster/shard"
-	"github.com/m3db/m3x/ident"
-	xlog "github.com/m3db/m3x/log"
-	"github.com/m3db/m3x/pool"
-	xsync "github.com/m3db/m3x/sync"
-
 	"github.com/stretchr/testify/require"
 	tchannel "github.com/uber/tchannel-go"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/client"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/clock"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/generated/thrift/rpc"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/integration/fake"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/integration/generate"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/persist/fs"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/retention"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/sharding"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/block"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/cluster"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/index"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/series"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/topology"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/ts"
+	"github.com/sniperkit/snk.fork.m3cluster/services"
+	"github.com/sniperkit/snk.fork.m3cluster/shard"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
+	"github.com/sniperkit/snk.fork.m3x/pool"
+	xsync "github.com/sniperkit/snk.fork.m3x/sync"
 )
 
 var (

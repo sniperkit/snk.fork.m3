@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,9 +29,9 @@ package logical
 import (
 	"math"
 
-	"github.com/m3db/m3/src/query/block"
-	"github.com/m3db/m3/src/query/executor/transform"
-	"github.com/m3db/m3/src/query/parser"
+	"github.com/sniperkit/snk.fork.m3/src/query/block"
+	"github.com/sniperkit/snk.fork.m3/src/query/executor/transform"
+	"github.com/sniperkit/snk.fork.m3/src/query/parser"
 )
 
 const (

@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,19 +32,19 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/retention"
-	"github.com/m3db/m3/src/dbnode/storage/bootstrap/result"
-	"github.com/m3db/m3/src/dbnode/storage/index"
-	"github.com/m3db/m3/src/dbnode/storage/namespace"
-	"github.com/m3db/m3/src/m3ninx/doc"
-	"github.com/m3db/m3/src/m3ninx/index/segment"
-	"github.com/m3db/m3x/context"
-	"github.com/m3db/m3x/ident"
-	xtest "github.com/m3db/m3x/test"
-	xtime "github.com/m3db/m3x/time"
-
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/retention"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap/result"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/index"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/doc"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/index/segment"
+	"github.com/sniperkit/snk.fork.m3x/context"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	xtest "github.com/sniperkit/snk.fork.m3x/test"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 type testWriteBatchOption func(index.WriteBatchOptions) index.WriteBatchOptions

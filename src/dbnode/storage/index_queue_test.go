@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,21 +32,21 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/clock"
-	m3dberrors "github.com/m3db/m3/src/dbnode/storage/errors"
-	"github.com/m3db/m3/src/dbnode/storage/index"
-	"github.com/m3db/m3/src/dbnode/storage/namespace"
-	"github.com/m3db/m3/src/m3ninx/doc"
-	m3ninxidx "github.com/m3db/m3/src/m3ninx/idx"
-	"github.com/m3db/m3x/context"
-	"github.com/m3db/m3x/ident"
-	xtime "github.com/m3db/m3x/time"
-
 	"github.com/fortytw2/leaktest"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/uber-go/tally"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/clock"
+	m3dberrors "github.com/sniperkit/snk.fork.m3/src/dbnode/storage/errors"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/index"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/doc"
+	m3ninxidx "github.com/sniperkit/snk.fork.m3/src/m3ninx/idx"
+	"github.com/sniperkit/snk.fork.m3x/context"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 func testNamespaceIndexOptions() index.Options {

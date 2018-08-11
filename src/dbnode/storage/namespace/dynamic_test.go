@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2017 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,17 +31,17 @@ import (
 	"testing"
 	"time"
 
-	nsproto "github.com/m3db/m3/src/dbnode/generated/proto/namespace"
-	"github.com/m3db/m3cluster/client"
-	"github.com/m3db/m3cluster/kv"
-	"github.com/m3db/m3x/instrument"
-	xtime "github.com/m3db/m3x/time"
-
 	"github.com/fortytw2/leaktest"
 	"github.com/golang/mock/gomock"
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/require"
 	"github.com/uber-go/tally"
+
+	nsproto "github.com/sniperkit/snk.fork.m3/src/dbnode/generated/proto/namespace"
+	"github.com/sniperkit/snk.fork.m3cluster/client"
+	"github.com/sniperkit/snk.fork.m3cluster/kv"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 func newTestOpts(t *testing.T, ctrl *gomock.Controller, watchable kv.ValueWatchable) DynamicOptions {

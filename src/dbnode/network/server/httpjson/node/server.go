@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,12 +30,12 @@ import (
 	"net"
 	"net/http"
 
-	ns "github.com/m3db/m3/src/dbnode/network/server"
-	"github.com/m3db/m3/src/dbnode/network/server/httpjson"
-	"github.com/m3db/m3/src/dbnode/network/server/tchannelthrift"
-	ttnode "github.com/m3db/m3/src/dbnode/network/server/tchannelthrift/node"
-	"github.com/m3db/m3/src/dbnode/storage"
-	"github.com/m3db/m3x/context"
+	ns "github.com/sniperkit/snk.fork.m3/src/dbnode/network/server"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/httpjson"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/tchannelthrift"
+	ttnode "github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/tchannelthrift/node"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage"
+	"github.com/sniperkit/snk.fork.m3x/context"
 )
 
 type server struct {

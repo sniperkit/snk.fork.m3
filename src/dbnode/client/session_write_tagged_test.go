@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,20 +35,20 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/generated/thrift/rpc"
-	"github.com/m3db/m3/src/dbnode/serialize"
-	"github.com/m3db/m3/src/dbnode/topology"
-	xmetrics "github.com/m3db/m3/src/dbnode/x/metrics"
-	"github.com/m3db/m3x/checked"
-	xerrors "github.com/m3db/m3x/errors"
-	"github.com/m3db/m3x/ident"
-	xtest "github.com/m3db/m3x/test"
-	xtime "github.com/m3db/m3x/time"
-
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/uber-go/tally"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/generated/thrift/rpc"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/serialize"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/topology"
+	xmetrics "github.com/sniperkit/snk.fork.m3/src/dbnode/x/metrics"
+	"github.com/sniperkit/snk.fork.m3x/checked"
+	xerrors "github.com/sniperkit/snk.fork.m3x/errors"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	xtest "github.com/sniperkit/snk.fork.m3x/test"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 func TestSessionWriteTaggedNotOpenError(t *testing.T) {

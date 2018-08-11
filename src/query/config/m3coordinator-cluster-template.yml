@@ -1,3 +1,7 @@
+# Sniperkit-Bot
+# - Date: 2018-08-11 22:33:29.968253967 +0200 CEST m=+0.111794099
+# - Status: analyzed
+
 listenAddress: 0.0.0.0:7201
 
 metrics:
@@ -5,7 +9,7 @@ metrics:
     prefix: "coordinator"
   prometheus:
     handlerPath: /metrics
-    listenAddress: 0.0.0.0:7203 # until https://github.com/m3db/m3/issues/682 is resolved
+    listenAddress: 0.0.0.0:7203 # until https://github.com/sniperkit/snk.fork.m3/issues/682 is resolved
   sanitization: prometheus
   samplingRate: 1.0
   extended: none

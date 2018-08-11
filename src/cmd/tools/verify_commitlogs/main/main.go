@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2017 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,25 +36,25 @@ import (
 	"strings"
 	"time"
 
-	"github.com/m3db/m3/src/cmd/tools"
-	"github.com/m3db/m3/src/dbnode/encoding"
-	"github.com/m3db/m3/src/dbnode/encoding/m3tsz"
-	"github.com/m3db/m3/src/dbnode/persist/fs"
-	"github.com/m3db/m3/src/dbnode/persist/fs/commitlog"
-	"github.com/m3db/m3/src/dbnode/retention"
-	"github.com/m3db/m3/src/dbnode/storage/block"
-	"github.com/m3db/m3/src/dbnode/storage/bootstrap"
-	"github.com/m3db/m3/src/dbnode/storage/bootstrap/bootstrapper"
-	commitlogsrc "github.com/m3db/m3/src/dbnode/storage/bootstrap/bootstrapper/commitlog"
-	"github.com/m3db/m3/src/dbnode/storage/bootstrap/result"
-	"github.com/m3db/m3/src/dbnode/storage/namespace"
-	"github.com/m3db/m3/src/dbnode/ts"
-	"github.com/m3db/m3/src/dbnode/x/xio"
-	"github.com/m3db/m3x/ident"
-	"github.com/m3db/m3x/instrument"
-	xlog "github.com/m3db/m3x/log"
-	"github.com/m3db/m3x/pool"
-	xtime "github.com/m3db/m3x/time"
+	"github.com/sniperkit/snk.fork.m3/src/cmd/tools"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding/m3tsz"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/persist/fs"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/persist/fs/commitlog"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/retention"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/block"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap/bootstrapper"
+	commitlogsrc "github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap/bootstrapper/commitlog"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap/result"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/ts"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/x/xio"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
+	"github.com/sniperkit/snk.fork.m3x/pool"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 var flagParser = flag.NewFlagSet("Verify Commitlogs", flag.ExitOnError)

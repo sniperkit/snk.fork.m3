@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // +build integration
 
 // Copyright (c) 2017 Uber Technologies, Inc.
@@ -26,17 +32,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/integration/generate"
-	persistfs "github.com/m3db/m3/src/dbnode/persist/fs"
-	"github.com/m3db/m3/src/dbnode/retention"
-	"github.com/m3db/m3/src/dbnode/storage/bootstrap"
-	"github.com/m3db/m3/src/dbnode/storage/bootstrap/bootstrapper"
-	bcl "github.com/m3db/m3/src/dbnode/storage/bootstrap/bootstrapper/commitlog"
-	"github.com/m3db/m3/src/dbnode/storage/bootstrap/bootstrapper/fs"
-	"github.com/m3db/m3/src/dbnode/storage/namespace"
-	xtime "github.com/m3db/m3x/time"
-
 	"github.com/stretchr/testify/require"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/integration/generate"
+	persistfs "github.com/sniperkit/snk.fork.m3/src/dbnode/persist/fs"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/retention"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap/bootstrapper"
+	bcl "github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap/bootstrapper/commitlog"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap/bootstrapper/fs"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 // Consider a database running with a single namespaces, and the following retention opts:

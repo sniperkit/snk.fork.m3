@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,11 +32,13 @@ package mocks
 
 import (
 	context "context"
-	gomock "github.com/golang/mock/gomock"
-	models "github.com/m3db/m3/src/query/models"
-	tsdb "github.com/m3db/m3/src/query/tsdb"
 	reflect "reflect"
 	time "time"
+
+	gomock "github.com/golang/mock/gomock"
+
+	models "github.com/sniperkit/snk.fork.m3/src/query/models"
+	tsdb "github.com/sniperkit/snk.fork.m3/src/query/tsdb"
 )
 
 // MockPolicyResolver is a mock of PolicyResolver interface

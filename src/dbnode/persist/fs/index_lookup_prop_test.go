@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // +build big
 
 // Copyright (c) 2017 Uber Technologies, Inc.
@@ -31,15 +37,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/digest"
-	"github.com/m3db/m3/src/dbnode/persist/fs/msgpack"
-	"github.com/m3db/m3x/checked"
-	"github.com/m3db/m3x/ident"
-
 	"github.com/leanovate/gopter"
 	"github.com/leanovate/gopter/gen"
 	"github.com/leanovate/gopter/prop"
 	"github.com/stretchr/testify/assert"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/digest"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/persist/fs/msgpack"
+	"github.com/sniperkit/snk.fork.m3x/checked"
+	"github.com/sniperkit/snk.fork.m3x/ident"
 )
 
 func TestIndexLookupWriteRead(t *testing.T) {

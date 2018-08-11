@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,14 +27,14 @@
 package node
 
 import (
-	"github.com/m3db/m3/src/dbnode/generated/thrift/rpc"
-	ns "github.com/m3db/m3/src/dbnode/network/server"
-	"github.com/m3db/m3/src/dbnode/network/server/tchannelthrift"
-	"github.com/m3db/m3/src/dbnode/network/server/tchannelthrift/node/channel"
-	"github.com/m3db/m3/src/dbnode/storage"
-	"github.com/m3db/m3x/context"
-
 	"github.com/uber/tchannel-go"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/generated/thrift/rpc"
+	ns "github.com/sniperkit/snk.fork.m3/src/dbnode/network/server"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/tchannelthrift"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/tchannelthrift/node/channel"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage"
+	"github.com/sniperkit/snk.fork.m3x/context"
 )
 
 type server struct {

@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2017 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -29,16 +35,16 @@ import (
 	"strings"
 	"time"
 
-	coordinatorcfg "github.com/m3db/m3/src/cmd/services/m3query/config"
-	"github.com/m3db/m3/src/dbnode/client"
-	"github.com/m3db/m3/src/dbnode/environment"
-	"github.com/m3db/m3x/config/hostid"
-	"github.com/m3db/m3x/instrument"
-	xlog "github.com/m3db/m3x/log"
-
 	"github.com/coreos/etcd/embed"
 	"github.com/coreos/etcd/pkg/transport"
 	"github.com/coreos/etcd/pkg/types"
+
+	coordinatorcfg "github.com/sniperkit/snk.fork.m3/src/cmd/services/m3query/config"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/client"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/environment"
+	"github.com/sniperkit/snk.fork.m3x/config/hostid"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 const (

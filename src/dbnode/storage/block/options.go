@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,14 +29,14 @@ package block
 import (
 	"io"
 
-	"github.com/m3db/m3/src/dbnode/encoding"
-	"github.com/m3db/m3/src/dbnode/encoding/m3tsz"
-	"github.com/m3db/m3/src/dbnode/ts"
-	"github.com/m3db/m3/src/dbnode/x/xio"
-	"github.com/m3db/m3x/clock"
-	"github.com/m3db/m3x/context"
-	"github.com/m3db/m3x/pool"
-	xsync "github.com/m3db/m3x/sync"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding/m3tsz"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/ts"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/x/xio"
+	"github.com/sniperkit/snk.fork.m3x/clock"
+	"github.com/sniperkit/snk.fork.m3x/context"
+	"github.com/sniperkit/snk.fork.m3x/pool"
+	xsync "github.com/sniperkit/snk.fork.m3x/sync"
 )
 
 const (

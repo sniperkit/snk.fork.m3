@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2017 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,14 +32,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/m3db/m3/src/m3nsch"
-	"github.com/m3db/m3/src/m3nsch/rpc"
-	"github.com/m3db/m3/src/m3nsch/rpc/convert"
-
-	xerrors "github.com/m3db/m3x/errors"
-	"github.com/m3db/m3x/instrument"
-	xlog "github.com/m3db/m3x/log"
 	"google.golang.org/grpc"
+
+	"github.com/sniperkit/snk.fork.m3/src/m3nsch"
+	"github.com/sniperkit/snk.fork.m3/src/m3nsch/rpc"
+	"github.com/sniperkit/snk.fork.m3/src/m3nsch/rpc/convert"
+	xerrors "github.com/sniperkit/snk.fork.m3x/errors"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 var (

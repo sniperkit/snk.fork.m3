@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // +build integration
 
 // Copyright (c) 2016 Uber Technologies, Inc.
@@ -26,16 +32,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/client"
-	"github.com/m3db/m3/src/dbnode/storage/namespace"
-	"github.com/m3db/m3/src/dbnode/topology"
-	"github.com/m3db/m3cluster/services"
-	"github.com/m3db/m3cluster/shard"
-	"github.com/m3db/m3x/ident"
-	xtime "github.com/m3db/m3x/time"
-
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/client"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/topology"
+	"github.com/sniperkit/snk.fork.m3cluster/services"
+	"github.com/sniperkit/snk.fork.m3cluster/shard"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 func TestNormalQuorumOnlyOneUp(t *testing.T) {

@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2017 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,9 +29,9 @@ package runtime
 import (
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/ratelimit"
-	"github.com/m3db/m3/src/dbnode/topology"
-	xclose "github.com/m3db/m3x/close"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/ratelimit"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/topology"
+	xclose "github.com/sniperkit/snk.fork.m3x/close"
 )
 
 // Options is a set of runtime options.

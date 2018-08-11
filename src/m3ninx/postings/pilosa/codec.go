@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,9 +29,9 @@ package pilosa
 import (
 	"bytes"
 
-	"github.com/m3db/m3/src/m3ninx/postings"
-
 	"github.com/pilosa/pilosa/roaring"
+
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/postings"
 )
 
 // Encoder helps serialize a Pilosa RoaringBitmap

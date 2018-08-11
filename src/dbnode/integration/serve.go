@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,16 +32,16 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/m3db/m3/src/dbnode/client"
-	hjcluster "github.com/m3db/m3/src/dbnode/network/server/httpjson/cluster"
-	hjnode "github.com/m3db/m3/src/dbnode/network/server/httpjson/node"
-	"github.com/m3db/m3/src/dbnode/network/server/tchannelthrift"
-	ttcluster "github.com/m3db/m3/src/dbnode/network/server/tchannelthrift/cluster"
-	ttnode "github.com/m3db/m3/src/dbnode/network/server/tchannelthrift/node"
-	"github.com/m3db/m3/src/dbnode/sharding"
-	"github.com/m3db/m3/src/dbnode/storage"
-	"github.com/m3db/m3/src/dbnode/topology"
-	"github.com/m3db/m3cluster/shard"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/client"
+	hjcluster "github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/httpjson/cluster"
+	hjnode "github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/httpjson/node"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/tchannelthrift"
+	ttcluster "github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/tchannelthrift/cluster"
+	ttnode "github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/tchannelthrift/node"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/sharding"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/topology"
+	"github.com/sniperkit/snk.fork.m3cluster/shard"
 )
 
 // newTestShardSet creates a default shard set

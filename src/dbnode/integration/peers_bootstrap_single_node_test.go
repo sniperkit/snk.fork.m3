@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // +build integration
 
 // Copyright (c) 2018 Uber Technologies, Inc.
@@ -26,13 +32,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/client"
-	"github.com/m3db/m3/src/dbnode/integration/generate"
-	"github.com/m3db/m3/src/dbnode/retention"
-	"github.com/m3db/m3/src/dbnode/storage/namespace"
-	xlog "github.com/m3db/m3x/log"
-
 	"github.com/stretchr/testify/require"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/client"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/integration/generate"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/retention"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 // TestPeersBootstrapSingleNode makes sure that we can include the peer bootstrapper

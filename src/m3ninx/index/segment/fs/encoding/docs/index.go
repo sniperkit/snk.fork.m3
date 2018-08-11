@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,9 +31,9 @@ import (
 	"io"
 	"math"
 
-	"github.com/m3db/m3/src/m3ninx/index"
-	"github.com/m3db/m3/src/m3ninx/index/segment/fs/encoding"
-	"github.com/m3db/m3/src/m3ninx/postings"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/index"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/index/segment/fs/encoding"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/postings"
 )
 
 const emptyID = math.MaxUint64

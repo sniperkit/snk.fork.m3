@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 package util
 
 import (
@@ -6,8 +12,8 @@ import (
 	"path"
 	"time"
 
-	"github.com/m3db/m3em/node"
-	xlog "github.com/m3db/m3x/log"
+	"github.com/sniperkit/snk.fork.m3em/node"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 const (

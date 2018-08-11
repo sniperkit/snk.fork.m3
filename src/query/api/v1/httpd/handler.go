@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,24 +34,24 @@ import (
 	"os"
 	"time"
 
-	"github.com/m3db/m3/src/cmd/services/m3coordinator/downsample"
-	dbconfig "github.com/m3db/m3/src/cmd/services/m3dbnode/config"
-	"github.com/m3db/m3/src/cmd/services/m3query/config"
-	"github.com/m3db/m3/src/query/api/v1/handler"
-	"github.com/m3db/m3/src/query/api/v1/handler/database"
-	"github.com/m3db/m3/src/query/api/v1/handler/namespace"
-	"github.com/m3db/m3/src/query/api/v1/handler/openapi"
-	"github.com/m3db/m3/src/query/api/v1/handler/placement"
-	"github.com/m3db/m3/src/query/api/v1/handler/prometheus/native"
-	"github.com/m3db/m3/src/query/api/v1/handler/prometheus/remote"
-	"github.com/m3db/m3/src/query/executor"
-	"github.com/m3db/m3/src/query/storage"
-	"github.com/m3db/m3/src/query/util/logging"
-	clusterclient "github.com/m3db/m3cluster/client"
-
 	"github.com/gorilla/mux"
 	"github.com/uber-go/tally"
 	"go.uber.org/zap"
+
+	"github.com/sniperkit/snk.fork.m3/src/cmd/services/m3coordinator/downsample"
+	dbconfig "github.com/sniperkit/snk.fork.m3/src/cmd/services/m3dbnode/config"
+	"github.com/sniperkit/snk.fork.m3/src/cmd/services/m3query/config"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler/database"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler/openapi"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler/placement"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler/prometheus/native"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler/prometheus/remote"
+	"github.com/sniperkit/snk.fork.m3/src/query/executor"
+	"github.com/sniperkit/snk.fork.m3/src/query/storage"
+	"github.com/sniperkit/snk.fork.m3/src/query/util/logging"
+	clusterclient "github.com/sniperkit/snk.fork.m3cluster/client"
 )
 
 const (

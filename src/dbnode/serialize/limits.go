@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,7 +26,9 @@
 
 package serialize
 
-import "math"
+import (
+	"math"
+)
 
 var (
 	// defaultMaxNumberTags is the maximum number of tags that can be encoded.

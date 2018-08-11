@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 package main
 
 import (
@@ -8,15 +14,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/m3db/m3/src/cmd/tools"
-	"github.com/m3db/m3/src/dbnode/encoding"
-	"github.com/m3db/m3/src/dbnode/encoding/m3tsz"
-	"github.com/m3db/m3/src/dbnode/persist"
-	"github.com/m3db/m3/src/dbnode/persist/fs"
-	"github.com/m3db/m3x/ident"
-	xlog "github.com/m3db/m3x/log"
-
 	"github.com/pborman/getopt"
+
+	"github.com/sniperkit/snk.fork.m3/src/cmd/tools"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding/m3tsz"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/persist"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/persist/fs"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 const snapshotType = "snapshot"

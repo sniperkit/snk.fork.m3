@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,11 +27,11 @@
 package httpjson
 
 import (
-	m3dbcontext "github.com/m3db/m3x/context"
-
 	apachethrift "github.com/apache/thrift/lib/go/thrift"
 	"github.com/uber/tchannel-go/thrift"
 	"golang.org/x/net/context"
+
+	m3dbcontext "github.com/sniperkit/snk.fork.m3x/context"
 )
 
 const (

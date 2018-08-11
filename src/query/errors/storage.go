@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -57,5 +63,4 @@ var (
 
 	// ErrOnlyFixedResSupported is an error returned we try to get step size for variable resolution
 	ErrOnlyFixedResSupported = errors.New("only fixed resolution supported")
-
 )

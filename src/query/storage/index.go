@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,10 +29,10 @@ package storage
 import (
 	"fmt"
 
-	"github.com/m3db/m3/src/dbnode/storage/index"
-	"github.com/m3db/m3/src/m3ninx/idx"
-	"github.com/m3db/m3/src/query/models"
-	"github.com/m3db/m3x/ident"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/index"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/idx"
+	"github.com/sniperkit/snk.fork.m3/src/query/models"
+	"github.com/sniperkit/snk.fork.m3x/ident"
 )
 
 // FromM3IdentToMetric converts an M3 ident metric to a coordinator metric

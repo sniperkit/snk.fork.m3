@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,15 +29,15 @@ package generate
 import (
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/digest"
-	"github.com/m3db/m3/src/dbnode/encoding"
-	"github.com/m3db/m3/src/dbnode/persist"
-	"github.com/m3db/m3/src/dbnode/persist/fs"
-	"github.com/m3db/m3/src/dbnode/sharding"
-	"github.com/m3db/m3/src/dbnode/ts"
-	"github.com/m3db/m3x/checked"
-	"github.com/m3db/m3x/ident"
-	xtime "github.com/m3db/m3x/time"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/digest"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/persist"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/persist/fs"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/sharding"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/ts"
+	"github.com/sniperkit/snk.fork.m3x/checked"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 type writer struct {

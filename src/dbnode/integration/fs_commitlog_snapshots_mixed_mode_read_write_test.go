@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // +build integration
 
 // Copyright (c) 2018 Uber Technologies, Inc.
@@ -22,7 +28,9 @@
 
 package integration
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestFsCommitLogSnapshotsMixedModeReadWrite(t *testing.T) {
 	testMixedModeReadWrite(t, true)

@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,12 +32,12 @@ import (
 	_ "net/http/pprof" // pprof: for debug listen server if configured
 	"os"
 
-	"github.com/m3db/m3/src/cmd/services/m3dbnode/config"
-	"github.com/m3db/m3/src/dbnode/client"
-	dbserver "github.com/m3db/m3/src/dbnode/server"
-	coordinatorserver "github.com/m3db/m3/src/query/server"
-	clusterclient "github.com/m3db/m3cluster/client"
-	xconfig "github.com/m3db/m3x/config"
+	"github.com/sniperkit/snk.fork.m3/src/cmd/services/m3dbnode/config"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/client"
+	dbserver "github.com/sniperkit/snk.fork.m3/src/dbnode/server"
+	coordinatorserver "github.com/sniperkit/snk.fork.m3/src/query/server"
+	clusterclient "github.com/sniperkit/snk.fork.m3cluster/client"
+	xconfig "github.com/sniperkit/snk.fork.m3x/config"
 )
 
 var (

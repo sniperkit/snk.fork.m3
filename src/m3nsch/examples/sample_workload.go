@@ -1,17 +1,23 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 package main
 
 import (
 	"os"
 	"time"
 
-	"github.com/m3db/m3/src/m3nsch"
-	"github.com/m3db/m3/src/m3nsch/coordinator"
-	"github.com/m3db/m3x/instrument"
-	xlog "github.com/m3db/m3x/log"
-
 	"github.com/pborman/getopt"
 	"github.com/spf13/viper"
 	validator "gopkg.in/validator.v2"
+
+	"github.com/sniperkit/snk.fork.m3/src/m3nsch"
+	"github.com/sniperkit/snk.fork.m3/src/m3nsch/coordinator"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 type m3nschConfig struct {

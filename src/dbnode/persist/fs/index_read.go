@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,12 +34,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/digest"
-	"github.com/m3db/m3/src/dbnode/generated/proto/index"
-	"github.com/m3db/m3/src/dbnode/persist"
-	"github.com/m3db/m3/src/dbnode/x/mmap"
-	idxpersist "github.com/m3db/m3/src/m3ninx/persist"
-	xlog "github.com/m3db/m3x/log"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/digest"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/generated/proto/index"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/persist"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/x/mmap"
+	idxpersist "github.com/sniperkit/snk.fork.m3/src/m3ninx/persist"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 type indexReader struct {

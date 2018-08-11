@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,24 +29,24 @@ package client
 import (
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/clock"
-	"github.com/m3db/m3/src/dbnode/encoding"
-	"github.com/m3db/m3/src/dbnode/generated/thrift/rpc"
-	"github.com/m3db/m3/src/dbnode/runtime"
-	"github.com/m3db/m3/src/dbnode/serialize"
-	"github.com/m3db/m3/src/dbnode/storage/block"
-	"github.com/m3db/m3/src/dbnode/storage/bootstrap/result"
-	"github.com/m3db/m3/src/dbnode/storage/index"
-	"github.com/m3db/m3/src/dbnode/storage/namespace"
-	"github.com/m3db/m3/src/dbnode/topology"
-	"github.com/m3db/m3x/context"
-	"github.com/m3db/m3x/ident"
-	"github.com/m3db/m3x/instrument"
-	"github.com/m3db/m3x/pool"
-	xretry "github.com/m3db/m3x/retry"
-	xtime "github.com/m3db/m3x/time"
-
 	tchannel "github.com/uber/tchannel-go"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/clock"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/generated/thrift/rpc"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/runtime"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/serialize"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/block"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap/result"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/index"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/topology"
+	"github.com/sniperkit/snk.fork.m3x/context"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	"github.com/sniperkit/snk.fork.m3x/pool"
+	xretry "github.com/sniperkit/snk.fork.m3x/retry"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 // Client can create sessions to write and read to a cluster

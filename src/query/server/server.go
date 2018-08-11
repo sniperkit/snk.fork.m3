@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,33 +36,33 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/m3db/m3/src/cmd/services/m3coordinator/downsample"
-	dbconfig "github.com/m3db/m3/src/cmd/services/m3dbnode/config"
-	"github.com/m3db/m3/src/cmd/services/m3query/config"
-	"github.com/m3db/m3/src/dbnode/client"
-	"github.com/m3db/m3/src/dbnode/serialize"
-	"github.com/m3db/m3/src/query/api/v1/httpd"
-	m3dbcluster "github.com/m3db/m3/src/query/cluster/m3db"
-	"github.com/m3db/m3/src/query/executor"
-	"github.com/m3db/m3/src/query/policy/filter"
-	"github.com/m3db/m3/src/query/storage"
-	"github.com/m3db/m3/src/query/storage/fanout"
-	"github.com/m3db/m3/src/query/storage/local"
-	"github.com/m3db/m3/src/query/storage/remote"
-	"github.com/m3db/m3/src/query/stores/m3db"
-	tsdbRemote "github.com/m3db/m3/src/query/tsdb/remote"
-	"github.com/m3db/m3/src/query/util/logging"
-	clusterclient "github.com/m3db/m3cluster/client"
-	etcdclient "github.com/m3db/m3cluster/client/etcd"
-	"github.com/m3db/m3x/clock"
-	xconfig "github.com/m3db/m3x/config"
-	"github.com/m3db/m3x/ident"
-	"github.com/m3db/m3x/instrument"
-	"github.com/m3db/m3x/pool"
-	xsync "github.com/m3db/m3x/sync"
-
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
+
+	"github.com/sniperkit/snk.fork.m3/src/cmd/services/m3coordinator/downsample"
+	dbconfig "github.com/sniperkit/snk.fork.m3/src/cmd/services/m3dbnode/config"
+	"github.com/sniperkit/snk.fork.m3/src/cmd/services/m3query/config"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/client"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/serialize"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/httpd"
+	m3dbcluster "github.com/sniperkit/snk.fork.m3/src/query/cluster/m3db"
+	"github.com/sniperkit/snk.fork.m3/src/query/executor"
+	"github.com/sniperkit/snk.fork.m3/src/query/policy/filter"
+	"github.com/sniperkit/snk.fork.m3/src/query/storage"
+	"github.com/sniperkit/snk.fork.m3/src/query/storage/fanout"
+	"github.com/sniperkit/snk.fork.m3/src/query/storage/local"
+	"github.com/sniperkit/snk.fork.m3/src/query/storage/remote"
+	"github.com/sniperkit/snk.fork.m3/src/query/stores/m3db"
+	tsdbRemote "github.com/sniperkit/snk.fork.m3/src/query/tsdb/remote"
+	"github.com/sniperkit/snk.fork.m3/src/query/util/logging"
+	clusterclient "github.com/sniperkit/snk.fork.m3cluster/client"
+	etcdclient "github.com/sniperkit/snk.fork.m3cluster/client/etcd"
+	"github.com/sniperkit/snk.fork.m3x/clock"
+	xconfig "github.com/sniperkit/snk.fork.m3x/config"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	"github.com/sniperkit/snk.fork.m3x/pool"
+	xsync "github.com/sniperkit/snk.fork.m3x/sync"
 )
 
 const (

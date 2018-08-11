@@ -1,3 +1,7 @@
+# Sniperkit-Bot
+# - Date: 2018-08-11 22:33:29.968253967 +0200 CEST m=+0.111794099
+# - Status: analyzed
+
 site_name: M3 Documentation
 
 theme:
@@ -31,8 +35,8 @@ theme:
 
 edit_uri: edit/master/docs/
 
-repo_name: m3db/m3
-repo_url: https://github.com/m3db/m3
+repo_name: sniperkit/snk.fork.m3
+repo_url: https://github.com/sniperkit/snk.fork.m3
 
 pages:
   - "Introduction": "index.md"

@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -28,13 +34,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/m3db/m3/src/cmd/services/m3query/config"
-	"github.com/m3db/m3cluster/generated/proto/placementpb"
-	"github.com/m3db/m3cluster/placement"
-
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+
+	"github.com/sniperkit/snk.fork.m3/src/cmd/services/m3query/config"
+	"github.com/sniperkit/snk.fork.m3cluster/generated/proto/placementpb"
+	"github.com/sniperkit/snk.fork.m3cluster/placement"
 )
 
 func TestPlacementInitHandler(t *testing.T) {

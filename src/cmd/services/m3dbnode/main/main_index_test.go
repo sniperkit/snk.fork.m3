@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // +build big
 //
 // Copyright (c) 2017 Uber Technologies, Inc.
@@ -30,23 +36,23 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/m3db/m3/src/cmd/services/m3dbnode/config"
-	"github.com/m3db/m3/src/dbnode/client"
-	"github.com/m3db/m3/src/dbnode/kvconfig"
-	"github.com/m3db/m3/src/dbnode/server"
-	"github.com/m3db/m3/src/dbnode/storage/index"
-	m3ninxidx "github.com/m3db/m3/src/m3ninx/idx"
-	"github.com/m3db/m3cluster/integration/etcd"
-	"github.com/m3db/m3cluster/placement"
-	"github.com/m3db/m3cluster/services"
-	xconfig "github.com/m3db/m3x/config"
-	"github.com/m3db/m3x/ident"
-	"github.com/m3db/m3x/instrument"
-	xlog "github.com/m3db/m3x/log"
-	xtime "github.com/m3db/m3x/time"
-
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+
+	"github.com/sniperkit/snk.fork.m3/src/cmd/services/m3dbnode/config"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/client"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/kvconfig"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/server"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/index"
+	m3ninxidx "github.com/sniperkit/snk.fork.m3/src/m3ninx/idx"
+	"github.com/sniperkit/snk.fork.m3cluster/integration/etcd"
+	"github.com/sniperkit/snk.fork.m3cluster/placement"
+	"github.com/sniperkit/snk.fork.m3cluster/services"
+	xconfig "github.com/sniperkit/snk.fork.m3x/config"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 // TestIndexEnabledServer tests booting a server using file based configuration.

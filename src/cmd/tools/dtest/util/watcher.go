@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2017 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,9 +33,9 @@ import (
 	"sync"
 	"time"
 
-	m3emnode "github.com/m3db/m3/src/dbnode/x/m3em/node"
-	xclock "github.com/m3db/m3x/clock"
-	xlog "github.com/m3db/m3x/log"
+	m3emnode "github.com/sniperkit/snk.fork.m3/src/dbnode/x/m3em/node"
+	xclock "github.com/sniperkit/snk.fork.m3x/clock"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 type nodesWatcher struct {

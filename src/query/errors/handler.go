@@ -1,6 +1,14 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 package errors
 
-import "errors"
+import (
+	"errors"
+)
 
 var (
 	// ErrNotFound is returned when something is not found, this might be used for direct comparison
@@ -8,7 +16,7 @@ var (
 	// ErrHeaderNotFound is returned when a header is not found
 	ErrHeaderNotFound = errors.New("header not found")
 	// ErrBatchQuery is returned when a batch query is found
-	ErrBatchQuery    = errors.New("batch queries are currently not supported")
+	ErrBatchQuery = errors.New("batch queries are currently not supported")
 	// ErrNoTargetFound is returned when a target is not found
 	ErrNoTargetFound = errors.New("no target found")
 )

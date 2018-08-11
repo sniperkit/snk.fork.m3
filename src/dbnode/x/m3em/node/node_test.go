@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2017 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,14 +29,14 @@ package m3db
 import (
 	"testing"
 
-	m3dbrpc "github.com/m3db/m3/src/dbnode/generated/thrift/rpc"
-	"github.com/m3db/m3em/generated/proto/m3em"
-	"github.com/m3db/m3em/node"
-	mocknode "github.com/m3db/m3em/node/mocks"
-
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
+
+	m3dbrpc "github.com/sniperkit/snk.fork.m3/src/dbnode/generated/thrift/rpc"
+	"github.com/sniperkit/snk.fork.m3em/generated/proto/m3em"
+	"github.com/sniperkit/snk.fork.m3em/node"
+	mocknode "github.com/sniperkit/snk.fork.m3em/node/mocks"
 )
 
 func newTestOptions() Options {

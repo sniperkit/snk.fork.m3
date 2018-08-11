@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -30,20 +36,20 @@ import (
 	"strings"
 	"time"
 
-	dbconfig "github.com/m3db/m3/src/cmd/services/m3dbnode/config"
-	"github.com/m3db/m3/src/cmd/services/m3query/config"
-	dbnamespace "github.com/m3db/m3/src/dbnode/storage/namespace"
-	"github.com/m3db/m3/src/query/api/v1/handler"
-	"github.com/m3db/m3/src/query/api/v1/handler/namespace"
-	"github.com/m3db/m3/src/query/api/v1/handler/placement"
-	"github.com/m3db/m3/src/query/generated/proto/admin"
-	"github.com/m3db/m3/src/query/util"
-	"github.com/m3db/m3/src/query/util/logging"
-	clusterclient "github.com/m3db/m3cluster/client"
-	"github.com/m3db/m3cluster/generated/proto/placementpb"
-
 	"github.com/golang/protobuf/jsonpb"
 	"go.uber.org/zap"
+
+	dbconfig "github.com/sniperkit/snk.fork.m3/src/cmd/services/m3dbnode/config"
+	"github.com/sniperkit/snk.fork.m3/src/cmd/services/m3query/config"
+	dbnamespace "github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/query/api/v1/handler/placement"
+	"github.com/sniperkit/snk.fork.m3/src/query/generated/proto/admin"
+	"github.com/sniperkit/snk.fork.m3/src/query/util"
+	"github.com/sniperkit/snk.fork.m3/src/query/util/logging"
+	clusterclient "github.com/sniperkit/snk.fork.m3cluster/client"
+	"github.com/sniperkit/snk.fork.m3cluster/generated/proto/placementpb"
 )
 
 const (

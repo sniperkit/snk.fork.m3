@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 package harness
 
 import (
@@ -13,33 +19,33 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/m3db/m3/src/cmd/tools/dtest/config"
-	"github.com/m3db/m3/src/cmd/tools/dtest/util"
-	"github.com/m3db/m3/src/cmd/tools/dtest/util/seed"
-	xclock "github.com/m3db/m3/src/dbnode/clock"
-	"github.com/m3db/m3/src/dbnode/integration/generate"
-	"github.com/m3db/m3/src/dbnode/kvconfig"
-	"github.com/m3db/m3/src/dbnode/retention"
-	"github.com/m3db/m3/src/dbnode/storage/namespace"
-	"github.com/m3db/m3/src/dbnode/x/m3em/convert"
-	m3emnode "github.com/m3db/m3/src/dbnode/x/m3em/node"
-	etcdclient "github.com/m3db/m3cluster/client/etcd"
-	"github.com/m3db/m3cluster/placement"
-	"github.com/m3db/m3cluster/services"
-	"github.com/m3db/m3cluster/shard"
-	"github.com/m3db/m3em/build"
-	"github.com/m3db/m3em/cluster"
-	hb "github.com/m3db/m3em/generated/proto/heartbeat"
-	"github.com/m3db/m3em/node"
-	xgrpc "github.com/m3db/m3em/x/grpc"
-	m3xclock "github.com/m3db/m3x/clock"
-	xerrors "github.com/m3db/m3x/errors"
-	"github.com/m3db/m3x/ident"
-	"github.com/m3db/m3x/instrument"
-	xlog "github.com/m3db/m3x/log"
-	xtcp "github.com/m3db/m3x/tcp"
-
 	"github.com/gogo/protobuf/proto"
+
+	"github.com/sniperkit/snk.fork.m3/src/cmd/tools/dtest/config"
+	"github.com/sniperkit/snk.fork.m3/src/cmd/tools/dtest/util"
+	"github.com/sniperkit/snk.fork.m3/src/cmd/tools/dtest/util/seed"
+	xclock "github.com/sniperkit/snk.fork.m3/src/dbnode/clock"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/integration/generate"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/kvconfig"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/retention"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/x/m3em/convert"
+	m3emnode "github.com/sniperkit/snk.fork.m3/src/dbnode/x/m3em/node"
+	etcdclient "github.com/sniperkit/snk.fork.m3cluster/client/etcd"
+	"github.com/sniperkit/snk.fork.m3cluster/placement"
+	"github.com/sniperkit/snk.fork.m3cluster/services"
+	"github.com/sniperkit/snk.fork.m3cluster/shard"
+	"github.com/sniperkit/snk.fork.m3em/build"
+	"github.com/sniperkit/snk.fork.m3em/cluster"
+	hb "github.com/sniperkit/snk.fork.m3em/generated/proto/heartbeat"
+	"github.com/sniperkit/snk.fork.m3em/node"
+	xgrpc "github.com/sniperkit/snk.fork.m3em/x/grpc"
+	m3xclock "github.com/sniperkit/snk.fork.m3x/clock"
+	xerrors "github.com/sniperkit/snk.fork.m3x/errors"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
+	xtcp "github.com/sniperkit/snk.fork.m3x/tcp"
 )
 
 const (

@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,13 +32,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/clock"
-	"github.com/m3db/m3/src/dbnode/generated/thrift/rpc"
-	"github.com/m3db/m3/src/dbnode/topology"
-	"github.com/m3db/m3x/ident"
-	"github.com/m3db/m3x/pool"
-
 	"github.com/uber/tchannel-go/thrift"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/clock"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/generated/thrift/rpc"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/topology"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	"github.com/sniperkit/snk.fork.m3x/pool"
 )
 
 type queue struct {
@@ -669,7 +675,7 @@ func (s namespaceWriteBatchOpsSlice) resetAt(
 }
 
 // TODO: use genny to make namespaceWriteBatchOps and namespaceWriteTaggedBatchOps
-// share code (https://github.com/m3db/m3/src/dbnode/issues/531)
+// share code (https://github.com/sniperkit/snk.fork.m3/src/dbnode/issues/531)
 type namespaceWriteTaggedBatchOps struct {
 	namespace                                  ident.ID
 	opsArrayPool                               *opArrayPool

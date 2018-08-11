@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,37 +38,37 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/clock"
-	"github.com/m3db/m3/src/dbnode/digest"
-	"github.com/m3db/m3/src/dbnode/encoding"
-	"github.com/m3db/m3/src/dbnode/generated/thrift/rpc"
-	"github.com/m3db/m3/src/dbnode/network/server/tchannelthrift/convert"
-	"github.com/m3db/m3/src/dbnode/runtime"
-	"github.com/m3db/m3/src/dbnode/serialize"
-	"github.com/m3db/m3/src/dbnode/storage/block"
-	"github.com/m3db/m3/src/dbnode/storage/bootstrap/result"
-	"github.com/m3db/m3/src/dbnode/storage/index"
-	idxconvert "github.com/m3db/m3/src/dbnode/storage/index/convert"
-	"github.com/m3db/m3/src/dbnode/storage/namespace"
-	"github.com/m3db/m3/src/dbnode/topology"
-	"github.com/m3db/m3/src/dbnode/ts"
-	"github.com/m3db/m3/src/dbnode/x/xio"
-	"github.com/m3db/m3/src/dbnode/x/xpool"
-	"github.com/m3db/m3cluster/shard"
-	"github.com/m3db/m3x/checked"
-	xclose "github.com/m3db/m3x/close"
-	"github.com/m3db/m3x/context"
-	xerrors "github.com/m3db/m3x/errors"
-	"github.com/m3db/m3x/ident"
-	"github.com/m3db/m3x/instrument"
-	xlog "github.com/m3db/m3x/log"
-	"github.com/m3db/m3x/pool"
-	xretry "github.com/m3db/m3x/retry"
-	xsync "github.com/m3db/m3x/sync"
-	xtime "github.com/m3db/m3x/time"
-
 	"github.com/uber-go/tally"
 	"github.com/uber/tchannel-go/thrift"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/clock"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/digest"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/generated/thrift/rpc"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/tchannelthrift/convert"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/runtime"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/serialize"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/block"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/bootstrap/result"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/index"
+	idxconvert "github.com/sniperkit/snk.fork.m3/src/dbnode/storage/index/convert"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/namespace"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/topology"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/ts"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/x/xio"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/x/xpool"
+	"github.com/sniperkit/snk.fork.m3cluster/shard"
+	"github.com/sniperkit/snk.fork.m3x/checked"
+	xclose "github.com/sniperkit/snk.fork.m3x/close"
+	"github.com/sniperkit/snk.fork.m3x/context"
+	xerrors "github.com/sniperkit/snk.fork.m3x/errors"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	"github.com/sniperkit/snk.fork.m3x/instrument"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
+	"github.com/sniperkit/snk.fork.m3x/pool"
+	xretry "github.com/sniperkit/snk.fork.m3x/retry"
+	xsync "github.com/sniperkit/snk.fork.m3x/sync"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 const (
@@ -1187,7 +1193,7 @@ func (s *session) fetchTaggedAttemptWithRLock(
 
 	// FOLLOWUP(prateek): currently both `index.Query` and the returned request depend on
 	// native, un-pooled types; so we do not Clone() either. We will start doing so
-	// once https://github.com/m3db/m3ninx/issues/42 lands. Including transferring ownership
+	// once https://github.com/sniperkit/snk.fork.m3ninx/issues/42 lands. Including transferring ownership
 	// of the Clone()'d value to the `fetchState`.
 	req, err := convert.ToRPCFetchTaggedRequest(nsClone, q, opts, fetchData)
 	if err != nil {

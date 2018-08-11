@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2017 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,13 +31,13 @@ import (
 	"os"
 	"testing"
 
-	"github.com/m3db/m3/src/dbnode/environment"
-	xtest "github.com/m3db/m3/src/dbnode/x/test"
-	xconfig "github.com/m3db/m3x/config"
-
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	yaml "gopkg.in/yaml.v2"
+
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/environment"
+	xtest "github.com/sniperkit/snk.fork.m3/src/dbnode/x/test"
+	xconfig "github.com/sniperkit/snk.fork.m3x/config"
 )
 
 func TestConfiguration(t *testing.T) {

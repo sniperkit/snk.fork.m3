@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2016 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,18 +31,18 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/digest"
-	"github.com/m3db/m3/src/dbnode/generated/thrift/rpc"
-	tterrors "github.com/m3db/m3/src/dbnode/network/server/tchannelthrift/errors"
-	"github.com/m3db/m3/src/dbnode/storage/index"
-	"github.com/m3db/m3/src/dbnode/x/xio"
-	"github.com/m3db/m3/src/dbnode/x/xpool"
-	"github.com/m3db/m3/src/m3ninx/generated/proto/querypb"
-	"github.com/m3db/m3/src/m3ninx/idx"
-	"github.com/m3db/m3x/checked"
-	xerrors "github.com/m3db/m3x/errors"
-	"github.com/m3db/m3x/ident"
-	xtime "github.com/m3db/m3x/time"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/digest"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/generated/thrift/rpc"
+	tterrors "github.com/sniperkit/snk.fork.m3/src/dbnode/network/server/tchannelthrift/errors"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/storage/index"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/x/xio"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/x/xpool"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/generated/proto/querypb"
+	"github.com/sniperkit/snk.fork.m3/src/m3ninx/idx"
+	"github.com/sniperkit/snk.fork.m3x/checked"
+	xerrors "github.com/sniperkit/snk.fork.m3x/errors"
+	"github.com/sniperkit/snk.fork.m3x/ident"
+	xtime "github.com/sniperkit/snk.fork.m3x/time"
 )
 
 var (

@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2018 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,11 +32,11 @@ import (
 	"sort"
 	"time"
 
-	"github.com/m3db/m3/src/dbnode/encoding"
-	"github.com/m3db/m3/src/dbnode/generated/thrift/rpc"
-	"github.com/m3db/m3/src/dbnode/topology"
-	"github.com/m3db/m3cluster/shard"
-	xerrors "github.com/m3db/m3x/errors"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/encoding"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/generated/thrift/rpc"
+	"github.com/sniperkit/snk.fork.m3/src/dbnode/topology"
+	"github.com/sniperkit/snk.fork.m3cluster/shard"
+	xerrors "github.com/sniperkit/snk.fork.m3x/errors"
 )
 
 type fetchTaggedResultAccumulatorOpts struct {
@@ -111,7 +117,7 @@ func (accum *fetchTaggedResultAccumulator) Add(
 
 	// FOLLOWUP(prateek): once we transmit the shards successfully satisfied by a response, the
 	// for loop below needs to be updated to filter the `hostShardSet` to only include those
-	// in the response. More details in https://github.com/m3db/m3/src/dbnode/issues/550.
+	// in the response. More details in https://github.com/sniperkit/snk.fork.m3/src/dbnode/issues/550.
 	for _, hs := range hostShardSet.ShardSet().All() {
 		shardID := int(hs.ID())
 		shardResult := accum.shardConsistencyResults[shardID]

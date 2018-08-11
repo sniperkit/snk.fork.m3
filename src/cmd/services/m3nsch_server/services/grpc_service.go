@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2017 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,15 +27,15 @@
 package services
 
 import (
-	"github.com/m3db/m3/src/m3nsch"
-	"github.com/m3db/m3/src/m3nsch/rpc"
-	convert "github.com/m3db/m3/src/m3nsch/rpc/convert"
-	xlog "github.com/m3db/m3x/log"
-
 	"github.com/uber-go/tally"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
+
+	"github.com/sniperkit/snk.fork.m3/src/m3nsch"
+	"github.com/sniperkit/snk.fork.m3/src/m3nsch/rpc"
+	convert "github.com/sniperkit/snk.fork.m3/src/m3nsch/rpc/convert"
+	xlog "github.com/sniperkit/snk.fork.m3x/log"
 )
 
 // NewGRPCService returns a new GRPCService wrapping a m3nsch.Agent

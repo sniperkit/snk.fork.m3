@@ -1,3 +1,9 @@
+/*
+Sniperkit-Bot
+- Date: 2018-08-11 22:33:29.968631097 +0200 CEST m=+0.112171202
+- Status: analyzed
+*/
+
 // Copyright (c) 2017 Uber Technologies, Inc.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,13 +30,13 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/m3db/m3cluster/client"
-	"github.com/m3db/m3cluster/kv"
-	"github.com/m3db/m3cluster/placement"
-	"github.com/m3db/m3cluster/services"
-	xwatch "github.com/m3db/m3x/watch"
-
 	"github.com/golang/protobuf/proto"
+
+	"github.com/sniperkit/snk.fork.m3cluster/client"
+	"github.com/sniperkit/snk.fork.m3cluster/kv"
+	"github.com/sniperkit/snk.fork.m3cluster/placement"
+	"github.com/sniperkit/snk.fork.m3cluster/services"
+	xwatch "github.com/sniperkit/snk.fork.m3x/watch"
 )
 
 // NB(r): once a lot more feature complete move this to the m3cluster repository
